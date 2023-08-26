@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden">
+    <a-scene
+      vr-mode-ui="enabled: false;"
+      loading-screen="enabled: false;"
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+      id="scene"
+      embedded
+      gesture-detector
+    >
+      <!-- Marker 1 -->
+      <a-marker
+        id="animated-marker"
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/3f47873c-c020-479c-b580-00b1061c4089/marker4.patt?v=1693043973798"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerA"
+      >
+        <a-entity
+          id="model1"
+          scale="0.06401037085205907 0.06401037085205907 0.06401037085205907"
+          animation-mixer="loop: repeat"
+          gltf-model="https://cdn.glitch.global/3f47873c-c020-479c-b580-00b1061c4089/asset4.glb?v=1693043971689"
+          class="clickable"
+          gesture-handler
+        ></a-entity>
+      </a-marker>
+
+      <!-- Marker 2 -->
+      <a-marker
+        id="animated-marker"
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/3f47873c-c020-479c-b580-00b1061c4089/marker2.patt?v=1693043953981"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerB"
+      >
+        <a-image
+          src="https://cdn.glitch.global/3f47873c-c020-479c-b580-00b1061c4089/asset2.png?v=1693043951850"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <!-- Marker 3 -->
+      <a-marker
+        id="animated-marker"
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/3f47873c-c020-479c-b580-00b1061c4089/marker3.patt?v=1693043950833"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerC"
+      >
+        <a-image
+          src="https://cdn.glitch.global/3f47873c-c020-479c-b580-00b1061c4089/asset3.png?v=1693043947467.png"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <!-- Marker 4 -->
+      <a-marker
+        id="animated-marker"
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/3f47873c-c020-479c-b580-00b1061c4089/marker1.patt?v=1693043905367"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerC"
+      >
+        <a-image
+          src="https://cdn.glitch.global/3f47873c-c020-479c-b580-00b1061c4089/asset1.png?v=1693043903608"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <!-- Marker 5 -->
+      <a-marker
+        id="animated-marker"
+        type="pattern"
+        preset="custom"
+        url="https://cdn.glitch.global/3f47873c-c020-479c-b580-00b1061c4089/marker.patt?v=1693044216195"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerC"
+      >
+        <a-image
+          src="https://cdn.glitch.global/3f47873c-c020-479c-b580-00b1061c4089/asset.png?v=1693044213397"
+          scale="1 1 1"
+          class="clickable"
+          rotation="-90 0 0"
+          gesture-handler
+        ></a-image>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

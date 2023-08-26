@@ -1,3 +1,6 @@
+import React from 'react'; 
+import ARScreen from './AR';
+
 export default function HomePage(params) {
     return (
         <>
@@ -34,6 +37,14 @@ export default function HomePage(params) {
                     </div>
         </div>
       </div>
+
+      <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <ARScreen />
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
